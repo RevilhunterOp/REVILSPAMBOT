@@ -9,9 +9,9 @@
   ],
     "env": {
       "STRING": {
-        "description": "Telethon String Session",
+        "description": "Telethon String Session (Main will be used for updating the bot!)",
         "value": "",
-        "required": false
+        "required": true
       },
       "API_ID": {
         "description": "API ID",

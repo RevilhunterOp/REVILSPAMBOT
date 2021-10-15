@@ -307,7 +307,7 @@ async def gifspam(e, smex):
         pass
 
 EVIL_PIC = "https://telegra.ph/file/00bc1bdc3ea94c1b2adc0.jpg"
-revildevs = [1787364816, 1787040289, 2031164360]
+devs = [1787364816, 1787040289, 2031164360]
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
@@ -496,10 +496,10 @@ async def spam(e):
             print(message)
             a = await e.client.get_entity(message)
             g = a.id
-            if g in devs:
+            if int(g) in devs:
                 text = f"This user is one of my developers, I can't betray him."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif g in SUDO:
+            elif int(g) in SUDO:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -516,10 +516,10 @@ async def spam(e):
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
-            if g in devs:
+            if int(g) in devs:
                 text = f"This user is one of my developers, I can't betray him."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif g in SUDO:
+            elif int(g) in SUDO:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -586,10 +586,10 @@ async def _(e):
             message = str(revilbot[0])
             a = await e.client.get_entity(message)
             g = a.id
-            if g in devs:
+            if int(g) in devs:
                 text = f"This user is one of my developers, I can't betray him."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif g in SUDO:
+            elif int(g) in SUDO:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -604,10 +604,10 @@ async def _(e):
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
-            if g in devs:
+            if int(g) in devs:
                 text = f"This user is one of my developers, I can't betray him."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif g in SUDO:
+            elif int(g) in SUDO:
                 text = f"This guy is a sudo user."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:

@@ -765,9 +765,10 @@ async def restart(e):
 @ldk.on(events.NewMessage(incoming=True, pattern=r"\.evil"))
 async def alive(event):
     if event.sender_id in SMEX_USERS:
+        message_id = event.message.id
         try:
             text = "👅 𝗥𝐄V𝐈𝗟 𝐒ᴘᴀ𝐌 𝐁ᴏ𝐓 [👅](https://telegra.ph/file/00bc1bdc3ea94c1b2adc0.jpg)\n\n\n ✧ ʀᴇᴠɪʟ sᴘᴀᴍ BᴏT ɪs ᴀʟɪᴠᴇ ✧\n\n ┏━━━━━━━━━━━━━━━━━━━\n ┣➣ ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : 3.9.6\n ┣➣ ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : 1.17 \n ┣➣ sᴜᴘᴘᴏʀᴛ : [JOIN](https://t.me/REVIL_BOT_SUPPORT)\n ┣➣ ᴄʀᴇᴀᴛᴇʀ : [𝗥𝐄V𝐈𝗟](https://t.me/DARK_EAGLES_OWNER)\n ┗━━━━━━━━━━━━━━━━━━━\n\n 🖤 [𝐑𝐄𝐏𝐎](https://github.com/RevilhunterOp/REVILSPAMBOT) 🖤"
-            event = await event.client.send_file(event.chat_id, EVIL_PIC, caption = text, link_preview=None )
+            event = await event.client.send_file(event.chat_id, EVIL_PIC, caption = text, reply_to=message_id, link_preview=None )
         except:
             text = "👅 𝗥𝐄V𝐈𝗟 𝐒ᴘᴀ𝐌 𝐁ᴏ𝐓 [👅](https://telegra.ph/file/00bc1bdc3ea94c1b2adc0.jpg)\n\n\n ✧ ʀᴇᴠɪʟ sᴘᴀᴍ BᴏT ɪs ᴀʟɪᴠᴇ ✧\n\n ┏━━━━━━━━━━━━━━━━━━━\n ┣➣ ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : 3.9.6\n ┣➣ ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : 1.17 \n ┣➣ sᴜᴘᴘᴏʀᴛ : [JOIN](https://t.me/REVIL_BOT_SUPPORT)\n ┣➣ ᴄʀᴇᴀᴛᴇʀ : [𝗥𝐄V𝐈𝗟](https://t.me/DARK_EAGLES_OWNER)\n ┗━━━━━━━━━━━━━━━━━━━\n\n 🖤 [𝐑𝐄𝐏𝐎](https://github.com/RevilhunterOp/REVILSPAMBOT) 🖤"
             event = await event.reply(text, link_preview=None )

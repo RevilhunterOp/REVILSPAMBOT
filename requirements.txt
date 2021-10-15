@@ -2,3 +2,4 @@ Telethon
 python-dotenv
 asyncio
 TgCrypto
+python-telegram-bot==12.8

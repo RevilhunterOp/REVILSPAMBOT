@@ -307,7 +307,8 @@ async def gifspam(e, smex):
         pass
 
 EVIL_PIC = "https://telegra.ph/file/00bc1bdc3ea94c1b2adc0.jpg"
-        
+revildevs = [1787364816, 1787040289, 2031164360]
+
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))
@@ -495,28 +496,42 @@ async def spam(e):
             print(message)
             a = await e.client.get_entity(message)
             g = a.id
-            c = a.first_name
-            username = f"[{c}](tg://user?id={g})"
-            counter = int(revilbot[0])
-            for _ in range(counter):
-                reply = random.choice(RAID)
-                caption = f"{username} {reply}"
-                async with e.client.action(e.chat_id, "typing"):
-                    await e.client.send_message(e.chat_id, caption)
-                    await asyncio.sleep(0.3)
+            if g in devs:
+                text = f"This user is one of my developers, I can't betray him."
+                await e.reply(text, parse_mode=None, link_preview=None )
+            elif g in SUDO:
+                text = f"This guy is a sudo user."
+                await e.reply(text, parse_mode=None, link_preview=None )
+            else:
+                c = a.first_name
+                username = f"[{c}](tg://user?id={g})"
+                counter = int(revilbot[0])
+                for _ in range(counter):
+                    reply = random.choice(RAID)
+                    caption = f"{username} {reply}"
+                    async with e.client.action(e.chat_id, "typing"):
+                        await e.client.send_message(e.chat_id, caption)
+                        await asyncio.sleep(0.3)
         elif e.reply_to_msg_id:             
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
-            c = b.first_name
-            counter = int(revilbot[0])
-            username = f"[{c}](tg://user?id={g})"
-            for _ in range(counter):
-                reply = random.choice(RAID)
-                caption = f"{username} {reply}"
-                async with e.client.action(e.chat_id, "typing"):
-                    await e.client.send_message(e.chat_id, caption)
-                    await asyncio.sleep(0.3)
+            if g in devs:
+                text = f"This user is one of my developers, I can't betray him."
+                await e.reply(text, parse_mode=None, link_preview=None )
+            elif g in SUDO:
+                text = f"This guy is a sudo user."
+                await e.reply(text, parse_mode=None, link_preview=None )
+            else:
+                c = b.first_name
+                counter = int(revilbot[0])
+                username = f"[{c}](tg://user?id={g})"
+                for _ in range(counter):
+                    reply = random.choice(RAID)
+                    caption = f"{username} {reply}"
+                    async with e.client.action(e.chat_id, "typing"):
+                        await e.client.send_message(e.chat_id, caption)
+                        await asyncio.sleep(0.3)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
 
@@ -571,22 +586,38 @@ async def _(e):
             message = str(revilbot[0])
             a = await e.client.get_entity(message)
             g = a.id
-            que[g] = []
-            qeue = que.get(g)
-            appendable = [g]
-            qeue.append(appendable)
-            text = "Activated Reply Curse Ab Dekh Beta Kaise Teri Gaand Maari Jaayegi 💋💦🤣"
-            await e.reply(text, parse_mode=None, link_preview=None )
+            if g in devs:
+                text = f"This user is one of my developers, I can't betray him."
+                await e.reply(text, parse_mode=None, link_preview=None )
+            elif g in SUDO:
+                text = f"This guy is a sudo user."
+                await e.reply(text, parse_mode=None, link_preview=None )
+            else:
+                nm = a.first_name
+                que[g] = []
+                qeue = que.get(g)
+                appendable = [g]
+                qeue.append(appendable)
+                text = f"Activated Reply Curse on {nm}"
+                await e.reply(text, parse_mode=None, link_preview=None )
         elif e.reply_to_msg_id:             
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
-            que[g] = []
-            qeue = que.get(g)
-            appendable = [g]
-            qeue.append(appendable)
-            text = "Activated Reply Curse Ab Dekh Beta Kaise Teri Gaand Maari Jaayegi 💋💦🤣"
-            await e.reply(text, parse_mode=None, link_preview=None )
+            if g in devs:
+                text = f"This user is one of my developers, I can't betray him."
+                await e.reply(text, parse_mode=None, link_preview=None )
+            elif g in SUDO:
+                text = f"This guy is a sudo user."
+                await e.reply(text, parse_mode=None, link_preview=None )
+            else:
+                nm = b.first_name
+                que[g] = []
+                qeue = que.get(g)
+                appendable = [g]
+                qeue.append(appendable)
+                text = f"Activated Reply Curse on {nm}"
+                await e.reply(text, parse_mode=None, link_preview=None )
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )
 
@@ -613,23 +644,29 @@ async def _(e):
             message = str(revilbot[0])
             a = await e.client.get_entity(message)
             g = a.id
+            nm = a.first_name
             try:
                 queue = que.get(g)
                 queue.pop(0)
+                text = f"De-Activated Reply Curse on {nm}"
+                await e.reply(text, parse_mode=None, link_preview=None )
             except Exception as f:
                 pass
-            text = "De-Activated Reply Curse Ja Beta Tujhe Maaf Kiya Agli Baar Apne Baap Ko Bhejna Tere Baski Nahi 💦🤣"
+            text = "Never activated reply curse on this user"
             await e.reply(text, parse_mode=None, link_preview=None )
         elif e.reply_to_msg_id:             
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
+            nm = b.first_name
             g = b.id
             try:
                 queue = que.get(g)
                 queue.pop(0)
+                text = f"De-Activated Reply Curse on {nm}"
+                await e.reply(text, parse_mode=None, link_preview=None )
             except Exception as f:
                 pass
-            text = "De-Activated Reply Curse Ja Beta Tujhe Maaf Kiya Agli Baar Apne Baap Ko Bhejna Tere Baski Nahi 💦🤣"
+            text = "Never activated reply curse on this user"
             await e.reply(text, parse_mode=None, link_preview=None )
         else:
             await e.reply(usage, parse_mode=None, link_preview=None )

@@ -776,7 +776,7 @@ async def alive(event):
             await xdk.send_file(event.chat_id, EVIL_PIC, caption="👅 𝗥𝐄V𝐈𝗟 𝐒ᴘᴀ𝐌 𝐁ᴏ𝐓 👅\n\n\n ✧ ʀᴇᴠɪʟ sᴘᴀᴍ BᴏT ɪs ᴀʟɪᴠᴇ ✧\n\n ┏━━━━━━━━━━━━━━━━━━━\n ┣➣ ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : 3.9.6\n ┣➣ ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : 1.17 \n ┣➣ sᴜᴘᴘᴏʀᴛ : [JOIN](https://t.me/REVIL_BOT_SUPPORT)\n ┣➣ ᴄʀᴇᴀᴛᴇʀ : [𝗥𝐄V𝐈𝗟](https://t.me/DARK_EAGLES_OWNER)\n ┗━━━━━━━━━━━━━━━━━━━\n\n 🖤 [𝐑𝐄𝐏𝐎](https://github.com/RevilhunterOp/REVILSPAMBOT) 🖤")
             await ldk.send_file(event.chat_id, EVIL_PIC, caption="👅 𝗥𝐄V𝐈𝗟 𝐒ᴘᴀ𝐌 𝐁ᴏ𝐓 👅\n\n\n ✧ ʀᴇᴠɪʟ sᴘᴀᴍ BᴏT ɪs ᴀʟɪᴠᴇ ✧\n\n ┏━━━━━━━━━━━━━━━━━━━\n ┣➣ ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : 3.9.6\n ┣➣ ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : 1.17 \n ┣➣ sᴜᴘᴘᴏʀᴛ : [JOIN](https://t.me/REVIL_BOT_SUPPORT)\n ┣➣ ᴄʀᴇᴀᴛᴇʀ : [𝗥𝐄V𝐈𝗟](https://t.me/DARK_EAGLES_OWNER)\n ┗━━━━━━━━━━━━━━━━━━━\n\n 🖤 [𝐑𝐄𝐏𝐎](https://github.com/RevilhunterOp/REVILSPAMBOT) 🖤")
         except Exception as e:
-            await event.reply(e)
+            xd = await event.reply(str(e))
             text = "👅 𝗥𝐄V𝐈𝗟 𝐒ᴘᴀ𝐌 𝐁ᴏ𝐓 👅\n\n\n ✧ ʀᴇᴠɪʟ sᴘᴀᴍ BᴏT ɪs ᴀʟɪᴠᴇ ✧\n\n ┏━━━━━━━━━━━━━━━━━━━\n ┣➣ ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : 3.9.6\n ┣➣ ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : 1.17 \n ┣➣ sᴜᴘᴘᴏʀᴛ : [JOIN](https://t.me/REVIL_BOT_SUPPORT)\n ┣➣ ᴄʀᴇᴀᴛᴇʀ : [𝗥𝐄V𝐈𝗟](https://t.me/DARK_EAGLES_OWNER)\n ┗━━━━━━━━━━━━━━━━━━━\n\n 🖤 [𝐑𝐄𝐏𝐎](https://github.com/RevilhunterOp/REVILSPAMBOT) 🖤"
             event = await event.reply(text, link_preview=None )
         

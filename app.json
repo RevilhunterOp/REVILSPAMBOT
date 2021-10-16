@@ -1,5 +1,5 @@
 {
-  "name": "REVIL MULTISPAM BOT",
+  "name": "REVIL MULTI SPAMBOT",
   "description": "THE MOST POWERFUL MULTI SPAMBOT OF TELEGRAM.",
   "logo": "https://telegra.ph/file/00bc1bdc3ea94c1b2adc0.jpg",
   "keywords": [
@@ -70,7 +70,7 @@
       },
       "SUDO": {
         "description": "Sudo Users Id",
-        "value": "1517994352",
+        "value": "1787364816",
         "required": true
       }
   },
